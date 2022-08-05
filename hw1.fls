@@ -302,9 +302,36 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmtt12.tfm
+INPUT .\Q1_a.png
+INPUT .\Q1_a.png
+INPUT Q1_a.png
+INPUT .\Q1_a.png
 OUTPUT hw1.pdf
+INPUT .\Q1_a.png
+INPUT .\Q1_a.png
+INPUT .\Q1_a.png
 INPUT C:\Users\nsm0014\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+INPUT .\Q1_b.png
+INPUT .\Q1_b.png
+INPUT Q1_b.png
+INPUT .\Q1_b.png
+INPUT .\Q1_b.png
+INPUT .\Q1_b.png
+INPUT .\Q1_b.png
+INPUT .\Q1_c.png
+INPUT .\Q1_c.png
+INPUT Q1_c.png
+INPUT .\Q1_c.png
+INPUT .\Q1_c.png
+INPUT .\Q1_c.png
+INPUT .\Q1_c.png
+INPUT .\Q1_d.png
+INPUT .\Q1_d.png
+INPUT Q1_d.png
+INPUT .\Q1_d.png
+INPUT .\Q1_d.png
+INPUT .\Q1_d.png
+INPUT .\Q1_d.png
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmti12.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx8.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx6.tfm
@@ -333,7 +360,5 @@ INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmti12.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmti12.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt12.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt12.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\symbols\msam10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\symbols\msam10.pfb
