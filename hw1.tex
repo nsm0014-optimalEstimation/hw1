@@ -303,16 +303,34 @@ throws of six dice as follows (note: this is effectively the sum of 6 random var
                 \solution
                     In order to show that independent random vectors are uncorrelated, we must prove
                     \[>>cov(\mathbf{X}_1,\mathbf{X}_2)\triangleq E\{(\mathbf{X}_1 - \overline{\mathbf{X}}_1)(\mathbf{X}_2 - \overline{\mathbf{X}}_2)\} = 0\]
-                    to be true. We start by expanding and then combining like terms.
+                    to be true. We start by expanding terms.
                     \begin{equation}
                         \begin{split}
                             >>cov(\mathbf{X}_1,\mathbf{X}_2) & \triangleq E\{\mathbf{X}_1\mathbf{X}_2 - \mathbf{X}_1\overline{\mathbf{X}}_2 - \mathbf{X}_1\overline{\mathbf{X}}_1 + \overline{\mathbf{X}}_1\overline{\mathbf{X}}_2\}\\
-                            0 & = E\{\mathbf{X}_1\mathbf{X}_2\} - E\{\mathbf{X}_1\overline{\mathbf{X}}_2\} - E\{\mathbf{X}_1\overline{\mathbf{X}}_1\} + E\{\overline{\mathbf{X}}_1\overline{\mathbf{X}}_2\}\\
-                            0 & = E\{\mathbf{X}_1\mathbf{X}_2\} - E\{\mathbf{X}_1\overline{\mathbf{X}}_2\} - E\{\mathbf{X}_1\overline{\mathbf{X}}_1\} + E\{\overline{\mathbf{X}}_1\overline{\mathbf{X}}_2\}\\               
+                            0 & = E\{\mathbf{X}_1\mathbf{X}_2\} - E\{\mathbf{X}_1\overline{\mathbf{X}}_2\} - E\{\mathbf{X}_2\overline{\mathbf{X}}_1\} + E\{\overline{\mathbf{X}}_1\overline{\mathbf{X}}_2\}\\               
+                        \end{split}
+                    \end{equation}
+                    With the terms expanded, we can simplify each group and then combine like terms.
+                    \begin{equation}
+                        \begin{split}
+                             E\{\mathbf{X}_1\mathbf{X}_2\} & = E\{\mathbf{X}_1\}E\{\mathbf{X}_2\}\; = \;\overline{\mathbf{X}}_1\overline{\mathbf{X}}_2\\
+                            -E\{\mathbf{X}_1\overline{\mathbf{X}}_2\} & = -\overline{\mathbf{X}}_2E\{\mathbf{X}_1\} \; = \;-\overline{\mathbf{X}}_2\overline{\mathbf{X}}_1 \\
+                            -E\{\mathbf{X}_2\overline{\mathbf{X}}_1\} & = -\overline{\mathbf{X}}_1E\{\mathbf{X}_2\} \; = \;-\overline{\mathbf{X}}_1\overline{\mathbf{X}}_2 \\
+                            E\{\overline{\mathbf{X}}_1\overline{\mathbf{X}}_2\} & = \overline{\mathbf{X}}_1\overline{\mathbf{X}}_2\\
+                        \end{split}
+                    \end{equation}
+                    \begin{equation}
+                        \begin{split}
+                            0 & = \overline{\mathbf{X}}_1\overline{\mathbf{X}}_2 -\overline{\mathbf{X}}_2\overline{\mathbf{X}}_1 -\overline{\mathbf{X}}_1\overline{\mathbf{X}}_2 + \overline{\mathbf{X}}_1\overline{\mathbf{X}}_2\\
+                            0 & = 0\\
                         \end{split}
                     \end{equation}
             \part{Uncorrelated Gaussian random vectors are independent}\\
                 \solution
+                    We know from class that a joint Gaussian distribution can be described by the following function (equation \ref{eq:20}).\\
+                    \begin{equation}\label{eq:20}
+                        f_{x,y}(x,y) = \frac{exp\left(\frac{-1}{2(1 - \rho_{12}^2)}\left(\frac{x^2}{\sigma_1^2} - 2\rho_{12}\frac{xy}{\sigma_1\sigma_2}+\frac{y^2}{\sigma^2_2}\right) \right)}{2\pi\sigma_1\sigma_2\sqrt{1 - \rho_{12}^2}}
+                    \end{equation}
         \end{parts}    
  \clearpage   
     \question{Consider a sequence created by throwing a pair of dice and summing the numbers which are $\{-2.5,-1.5,-0.5,0.5,1.5,2.5\}$. Call this $V_o(k)$.}
