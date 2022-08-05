@@ -26,8 +26,8 @@
 \renewcommand{\solution}{\noindent\textbf{Ans:}\enspace}   %Replace "Ans:" with starting keyword in solution box
 
 \begin{questions}
-	\question{Use the MATLAB function $>>conv$ to produce discrete probability functions (PDF’s) for
-		throws of six dice as follows (note: this is effectively the sum of 6 random variables)}\\
+	\question{Use the MATLAB function $>>conv$ to produce discrete probability functions\\
+		(PDF’s) for throws of six dice as follows (note: this is effectively the sum of 6 random variables)}
 	\begin{parts}
 		\part{6 numbered: $1,\,2\,,3\,,4,\,5,\,6$}\\
 		\solution
@@ -68,8 +68,9 @@
 			\includegraphics[width=.91\linewidth]{Q1_d.png}
 		\end{figure}
 	\end{parts}
-	Check that the $\sum$PDF $= 1.0$\\
-	Plot each PDF with a normal distribution plot of the same average and sigma.\\
+	Check that the $\sum$PDF $= 1.0$
+
+	Plot each PDF with a normal distribution plot of the same average and sigma.
 
 	\textit{Note that even peculiar random distributions, taken in aggregate, tend to produce
 		“normal” error distributions}
@@ -242,28 +243,28 @@
 		\end{equation}
 		\part{Now what is the mean, $E(v_1 - E(v_1))$, rms, and variance of $v_1$}\\
 		\solution
+		\begin{subparts}
+			\subpart{The mean of $v_1$ is just the mean of $x_1$, which we already determined to be $3.5$.}
+			\subpart{
+				\begin{equation}
+					E(v_1 - E(v_1)) = E(x_1 - E(x_1)) = 0
+				\end{equation}}
+			\subpart{The root mean square value for $v_1$ is just the square root of $E(x_1^2)$, or $3.89$.}
+			\subpart{The variance of $v_1$ is just equation \ref{eq:9} and is equal to $2.917$.}
+		\end{subparts}
 
-		The mean of $v_1$ is just the mean of $x_1$, which we already determined to be $3.5$.\\
-
-		\begin{equation}
-			E(v_1 - E(v_1)) = E(x_1 - E(x_1)) = 0
-		\end{equation}\\
-
-		The root mean square value for $v_1$ is just the square root of $E(x_1^2)$, or $3.89$.\\
-
-		The variance of $v_1$ is just equation \ref{eq:9} and is equal to $2.917$.\\
 		\part{what is the mean, $E(v_2 - E(v_2))$, rms, and variance of $v_2$}\\
 		\solution
 
-		The mean of $v_2$ is just double the mean of $x_1$ since $v_2$ is the sum of $x_1$ and $x_2$. This gives $v_2$ a mean of 7.\\
+		The mean of $v_2$ is just double the mean of $x_1$ since $v_2$ is the sum of $x_1$ and $x_2$. This gives $v_2$ a mean of 7.
 
 		\begin{equation}
 			E(v_2 - E(v_2)) = 2\cdot E(x_1 - E(x_1)) = 0
-		\end{equation}\\
+		\end{equation}
 
-		The root mean square value for $v_2$ is just double the square root of $E(x_1^2)$, or $7.41$.\\
+		The root mean square value for $v_2$ is just double the square root of $E(x_1^2)$, or $7.41$.
 
-		The variance of $v_1$ is just double equation \ref{eq:9} and is equal to $5.83$.\\
+		The variance of $v_1$ is just double equation \ref{eq:9} and is equal to $5.83$.
 		\part{What is the new covariance matrix $P$.}\\
 		\solution
 		Using parts \textit{d} and \textit{e}, we can create a new covariance matrix, $\mathbf{P}$.
@@ -326,9 +327,10 @@
 				0 & = 0\\
 			\end{split}
 		\end{equation}
-		\part{Uncorrelated Gaussian random vectors are independent}\\
+
+		\part{Uncorrelated Gaussian random vectors are independent}
 		\solution
-		We know from class that a joint Gaussian distribution can be described by the following function (equation \ref{eq:20}).\\
+		We know from class that a joint Gaussian distribution can be described by the following function (equation \ref{eq:20}).
 		\begin{equation}\label{eq:20}
 			f_{x,y}(x,y) = \frac{exp\left(\frac{-1}{2(1 - \rho_{12}^2)}\left(\frac{x^2}{\sigma_1^2} - 2\rho_{12}\frac{xy}{\sigma_1\sigma_2}+\frac{y^2}{\sigma^2_2}\right) \right)}{2\pi\sigma_1\sigma_2\sqrt{1 - \rho_{12}^2}}
 		\end{equation}
