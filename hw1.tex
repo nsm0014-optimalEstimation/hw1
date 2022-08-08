@@ -25,6 +25,8 @@
 \printanswers
 \renewcommand{\solution}{\noindent\textbf{Ans:}\enspace}   %Replace "Ans:" with starting keyword in solution box
 
+
+
 \begin{questions}
 	\question{Use the MATLAB function $>>conv$ to produce discrete probability functions\\
 		(PDF’s) for throws of six dice as follows (note: this is effectively the sum of 6 random variables)}
@@ -354,16 +356,45 @@
 	\begin{parts}
 		\part{What is the PDF?}
 		\part{What are the mean and variance of this sequence?}\\
-		\solution
-		\begin{figure}[h!]
-			\includegraphics[width=\linewidth]{Q4_a.png}
-		\end{figure}
+		\solution{
+			The mean and standard deviation of the sequence can be found with the PDF in the figure below.
+			\begin{figure}[!h]
+				\centering
+				\includegraphics[width=\linewidth]{Q4_a.png}
+			\end{figure}
+		}
+
 		If we generate a new random sequence \[V_N(k+1) = (1 - r)V_N(k) + rV_o(k)\]where $V_N(k)$ is serially-correlated (not white).
 		\part{In steady state, what are the mean and variance of this new sequence $(V_N)$}\\
-		\solution
-		\part{What is the covariance function: $R(k) = E\{V_N(k)V_N(k-L)\}$}\\
-		(Hint: $V_N(k)$ and $V_o(k)$ are uncorrelated).\\
-		\solution
+		\solution{
+			If we lay out a few iterations of the sequence for increasing values of $k$ we can find the mean and variance.
+			\begin{equation}
+				\begin{split}
+					V_N(0) & = 0\\
+					k_0: \quad V_N(1) & = (1-r)V_N(0) + rV_o(0)\\
+					& = rV_o(0)\\
+					k_1: \quad V_N(2) & = (1-r)V_N(1) + rV_o(1)\\
+					& = (1-r)rV_o(0) + rV_o(1)\\
+					k_2: \quad V_N(3) & = (1-r)V_N(2) + rV_o(2)\\
+					& = (1-r)(1-r)rV_o(0) + rV_o(1) + rV_o(2)\\
+					& = (1-r)^2rV_o(0) + r(V_o(1) + V_o(2))\\
+					\vdots \qquad&\qquad \vdots\\
+					k_j: \quad V_N(j) & = (1-r)^{j-1}V_N(j-1) + rV_o(j-1)\\
+				\end{split}
+			\end{equation}
+			Seeing that $V_o$ has a near-zero mean, and that $V_N(k)$ depends on $V_o$, we can confidently say that the epxectation of $V_N(k)$ is also near-zero. To find the variance, we can run a Monte-Carlo simulation.
+			\begin{figure}[!h]
+				\centering
+				\includegraphics[width=\linewidth]{Q4_c.png}
+			\end{figure}
+		}
+		\part{What is the covariance function: $R(k) = E\{V_N(k)V_N(k-L)\}$}
+		
+		(Hint: $V_N(k)$ and $V_o(k)$ are uncorrelated).
+		
+		\solution{
+
+		}
 		\part{Are there any practical constraints on $r$?}\\
 		\solution
 	\end{parts}
