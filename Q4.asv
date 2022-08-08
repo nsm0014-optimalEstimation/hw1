@@ -1,0 +1,22 @@
+%% Formatting
+clc
+clear
+close all
+format shortg
+%% Begin Question 4
+V = [-2.5 -1.5 -0.5 0.5 1.5 2.5];
+
+d1 = (1/6).*ones(1,6);
+d2 = d1;
+con = conv(d1,d2);
+
+range = linspace(-5,5,11);
+
+con_avg = sum(con*range')
+con_var = sum(con*(range.^2)')
+con_std = sqrt(con_var)
+
+figure('postion',[500 500 800 600])
+xlabel('Outcome')
+ylabel('Probability')
+plot(range,con)

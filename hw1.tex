@@ -345,17 +345,19 @@
 		\begin{equation}
 			\begin{split}
 				f_{x,y}(x,y) & = \frac{exp\left(\frac{-x^2}{2\sigma_1^2}\right)exp\left(\frac{-y^2}{2\sigma_1^2}\right)}{2\pi\sigma_1\sigma_2}\\
+				f_{x}(x)f_{y}(y) & = \frac{exp\left(\frac{-x^2}{2\sigma_1^2}\right)}{2\pi\sigma_1}\frac{exp\left(\frac{-y^2}{2\sigma_1^2}\right)}{\sigma_2}\\
 			\end{split}
 		\end{equation}
 	\end{parts}
 	\clearpage
 	\question{Consider a sequence created by throwing a pair of dice and summing the numbers which are $\{-2.5,-1.5,-0.5,0.5,1.5,2.5\}$. Call this $V_o(k)$.}
 	\begin{parts}
-		\part{What is the PDF?}\\
-		\solution
+		\part{What is the PDF?}
 		\part{What are the mean and variance of this sequence?}\\
 		\solution
-
+		\begin{figure}[h!]
+			\includegraphics[width=\linewidth]{Q4_a.png}
+		\end{figure}
 		If we generate a new random sequence \[V_N(k+1) = (1 - r)V_N(k) + rV_o(k)\]where $V_N(k)$ is serially-correlated (not white).
 		\part{In steady state, what are the mean and variance of this new sequence $(V_N)$}\\
 		\solution
