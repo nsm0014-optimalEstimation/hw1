@@ -432,9 +432,36 @@
 		\]}
 	\begin{parts}
 		\part{What is the mean of x?}\\
-		\solution
+		\solution{
+			We know the general form for a continuous function to be
+			\[\overline{x} = \int^{\infty}_{-\infty}xf(x)dx \]
+			Because of the piecewise function we can use this general form for each interval.
+			\begin{equation}
+				\begin{split}
+					\overline{x} & = \int^{0}_{-\infty}x(0)dx + \int^{2}_{0}x(\frac{x}{2})dx + \int^{\infty}_{2}x(0)dx\\
+				\end{split}
+			\end{equation}
+			The first and last term result to 0,leaving us with the middle term. This leaves us with
+			\begin{equation}
+				\begin{split}
+					\overline{x} & = \int^{2}_{0}x(\frac{x}{2})dx\\
+					\overline{x} & = \frac{4}{3}\\
+				\end{split}
+			\end{equation}
+		}
 		\part{what is the variance of x?}\\
-		\solution
+		\solution{
+			We know the general form of variance to be
+			\[var(x) = \sigma^2 = E\left[x^2 - \overline{x}^2 \right] \]
+			Changing this to fit our particular form, and disregarding the first and second intervals of the piecewise function gives us
+			\begin{equation}
+				\begin{split}
+					E\left[x^2 - \overline{x}^2 \right] & = \int^2_0 x^2\left(\frac{x}{2}\right)dx - \frac{16}{9}\\
+					E\left[x^2 - \overline{x}^2 \right] & = 2 - 1.777778\\
+					E\left[x^2 - \overline{x}^2 \right] & = 0.22222\\
+				\end{split}
+			\end{equation}
+		}
 	\end{parts}
 	\clearpage
 	\question{Consider a normally distributed two-dimensional vector $\mathbf{X}$, with mean value zero and
