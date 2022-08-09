@@ -38,7 +38,7 @@
 			\begin{bmatrix}
 				0 & \frac{1}{6} & \frac{1}{6} & \frac{1}{6} & \frac{1}{6} & \frac{1}{6} & \frac{1}{6} \\
 			\end{bmatrix} \]
-		where the first index $0$ has no probability of occurring because the dice cannot roll a 0. Plotting the convolutions for each dice is displayed below along with the mean and standard deviations for each case in the title. The mean and standard deviations for case were found using equations \ref{eq:1} and \ref{eq:2}.
+		where the first index $0$ has no probability of occurring because the dice cannot roll a 0. Plotting the convolutions for each dice is displayed below along with the mean and standard deviations for each case in the title. The mean and standard deviations for case were found using equations~\ref{eq:1} and~\ref{eq:2}.
 		\begin{equation}\label{eq:1}
 			\overline{x} = \sum x \cdot f_x^T
 		\end{equation}
@@ -247,12 +247,12 @@
 		\solution
 		\begin{subparts}
 			\subpart{The mean of $v_1$ is just the mean of $x_1$, which we already determined to be $3.5$.}
-			\subpart{
-				\begin{equation}
+			\subpart
+			{\begin{equation}
 					E(v_1 - E(v_1)) = E(x_1 - E(x_1)) = 0
 				\end{equation}}
 			\subpart{The root mean square value for $v_1$ is just the square root of $E(x_1^2)$, or $3.89$.}
-			\subpart{The variance of $v_1$ is just equation \ref{eq:9} and is equal to $2.917$.}
+			\subpart{The variance of $v_1$ is just equation~\ref{eq:9} and is equal to $2.917$.}
 		\end{subparts}
 
 		\part{what is the mean, $E(v_2 - E(v_2))$, rms, and variance of $v_2$}\\
@@ -266,7 +266,7 @@
 
 		The root mean square value for $v_2$ is just double the square root of $E(x_1^2)$, or $7.41$.
 
-		The variance of $v_1$ is just double equation \ref{eq:9} and is equal to $5.83$.
+		The variance of $v_1$ is just double equation~\ref{eq:9} and is equal to $5.83$.
 		\part{What is the new covariance matrix $P$.}\\
 		\solution
 		Using parts \textit{d} and \textit{e}, we can create a new covariance matrix, $\mathbf{P}$.
@@ -301,7 +301,7 @@
 		\end{equation}
 	\end{parts}
 	\clearpage
-	\question{Two random vectors $\mathbf{X}_1$ and $\mathbf{X_2}$ are uncorrelateed if \[E\{(\mathbf{X}_1 - \overline{\mathbf{X}}_1)(\mathbf{X}_2 - \overline{\mathbf{X}}_2) \} = 0 \]} Show that:
+	\question{Two random vectors $\mathbf{X}_1$ and $\mathbf{X_2}$ are uncorrelated if \[E\{(\mathbf{X}_1 - \overline{\mathbf{X}}_1)(\mathbf{X}_2 - \overline{\mathbf{X}}_2) \} = 0 \]} Show that:
 	\begin{parts}
 		\part{Independent random vectors are uncorrelated}\\
 		\solution
@@ -332,18 +332,18 @@
 
 		\part{Uncorrelated Gaussian random vectors are independent}
 		\solution
-		We know from class that a joint Gaussian distribution can be described by the following function (equation \ref{eq:20}).
+		We know from class that a joint Gaussian distribution can be described by the following function (equation~\ref{eq:20}).
 		\begin{equation}\label{eq:20}
 			f_{x,y}(x,y) = \frac{exp\left(\frac{-1}{2(1 - \rho_{12}^2)}\left(\frac{x^2}{\sigma_1^2} - 2\rho_{12}\frac{xy}{\sigma_1\sigma_2}+\frac{y^2}{\sigma^2_2}\right) \right)}{2\pi\sigma_1\sigma_2\sqrt{1 - \rho_{12}^2}}
 		\end{equation}
-		Uncorrelated Gaussian vectors have $\rho_{12} = 0$, and a substition narrows down this function.
+		Uncorrelated Gaussian vectors have $\rho_{12} = 0$, and a substitution narrows down this function.
 		\begin{equation}
 			\begin{split}
 				f_{x,y}(x,y) & = \frac{exp\left(\frac{-1}{2(1 - (0)^2)}\left(\frac{x^2}{\sigma_1^2} - 2(0)\frac{xy}{\sigma_1\sigma_2}+\frac{y^2}{\sigma^2_2}\right) \right)}{2\pi\sigma_1\sigma_2\sqrt{1 - (0)^2}}\\
 				& = \frac{exp\left(\frac{-1}{2}\left(\frac{x^2}{\sigma_1^2}+\frac{y^2}{\sigma^2_2}\right) \right)}{2\pi\sigma_1\sigma_2}\\
 			\end{split}
 		\end{equation}
-		Expanding the exponential in the numerator of the function allows us to match the defintion of independence from our notes.
+		Expanding the exponential in the numerator of the function allows us to match the definition of independence from our notes.
 		\begin{equation}
 			\begin{split}
 				f_{x,y}(x,y) & = \frac{exp\left(\frac{-x^2}{2\sigma_1^2}\right)exp\left(\frac{-y^2}{2\sigma_1^2}\right)}{2\pi\sigma_1\sigma_2}\\
@@ -356,18 +356,18 @@
 	\begin{parts}
 		\part{What is the PDF?}
 		\part{What are the mean and variance of this sequence?}\\
-		\solution{
-			The mean and standard deviation of the sequence can be found with the PDF in the figure below.
+		\solution
+		{The mean and standard deviation of the sequence can be found with the PDF in figure~\ref{fig:Q4_A}.
 			\begin{figure}[!h]
+				\label{fig:Q4_A}
 				\centering
 				\includegraphics[width=\linewidth]{Q4_a.png}
-			\end{figure}
-		}
+			\end{figure}}
 
 		If we generate a new random sequence \[V_N(k+1) = (1 - r)V_N(k) + rV_o(k)\]where $V_N(k)$ is serially-correlated (not white).
 		\part{In steady state, what are the mean and variance of this new sequence $(V_N)$}\\
-		\solution{
-			If we lay out a few iterations of the sequence for increasing values of $k$ we can find the mean and variance.
+		\solution
+		{If we lay out a few iterations of the sequence for increasing values of $k$ we can find the mean and variance.
 			\begin{equation}
 				\begin{split}
 					V_N(0) & = 0\\
@@ -382,21 +382,43 @@
 					k_j: \quad V_N(j) & = (1-r)^{j-1}V_N(j-1) + rV_o(j-1)\\
 				\end{split}
 			\end{equation}
-			Seeing that $V_o$ has a near-zero mean, and that $V_N(k)$ depends on $V_o$, we can confidently say that the epxectation of $V_N(k)$ is also near-zero. To find the variance, we can run a Monte-Carlo simulation.
+			Seeing that $V_o$ has a near-zero mean, and that $V_N(k)$ depends on $V_o$, we can confidently say that the expectation of $V_N(k)$ is also near-zero. To find the variance, we can run a Monte-Carlo simulation.
 			\begin{figure}[!h]
 				\centering
 				\includegraphics[width=\linewidth]{Q4_c.png}
 			\end{figure}
 		}
 		\part{What is the covariance function: $R(k) = E\{V_N(k)V_N(k-L)\}$}
-		
-		(Hint: $V_N(k)$ and $V_o(k)$ are uncorrelated).
-		
-		\solution{
 
+		(Hint: $V_N(k)$ and $V_o(k)$ are uncorrelated).
+
+		\solution
+		{We can start by expanding on the quotients inside of the covariance function. Instead of $k$ for indices of the sequences, I am using $j$.
+			\begin{equation}
+				\begin{split}
+					V_N(j)V_N(j-L) & = (1-r)^jV_o(0) + r(1-r)^{j-1}V_o(1) + r(1-r)^{j-2}V_o(2)\\
+					& + r(1-r)V_o(j-1) + rV_o(j)(1-r)^{j-L}V_o(0)\\
+					& + r(1-r)^{j-L-1}V_o(1) + r(1-r)^{j-L-2}V_o(2)\\
+					& + r(1-r)V_o(n-L-1) + rV_o(n-L)\\
+				\end{split}
+			\end{equation}
+			Taking out the uncorrelated terms with an expectation equal to zero, reduces this long general form down to
+			\begin{equation}
+				\begin{split}
+					V_N(j)V_N(j-L) & = (1-r)^{2j-L}V_o(0)^2 + r^2(1-r)^{2j-L-1}V_o(1)^2\\
+					& + r^2(1-r)^{2n-2L}V_o(n-L)^2\\
+				\end{split}
+			\end{equation}
+			Seeing as the first term is just a constant, and the term $V_o(n)^2$ is just the variance of the system, we can rewrite the function as
+			\begin{equation}
+				\begin{split}
+					E\left[V_N(j)V_N(j-L)\right] & = (1-r)^{2j-L}\sigma_o^2 + r^2(1-r)^{2j-L-1}\sigma_o^2\\
+					& + \dotsc + r^2(1-r)^{2n-2L}\sigma_o^2\\
+				\end{split}
+			\end{equation}
 		}
 		\part{Are there any practical constraints on $r$?}\\
-		\solution
+		\solution{The constraints on r depend on the qoutient $(1-r)$. Because of this $r$ must be less than $1$ but greater than 0, otherwise, the system will grow unbounded.}
 	\end{parts}
 	\clearpage
 	\question{A random variable $x$ has a PDF given by:
