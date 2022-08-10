@@ -473,9 +473,23 @@
 	}
 	\begin{parts}
 		\part{Find the eigenvalues of $P_{\mathbf{X}}$}\\
-		\solution
+		\solution{
+			Using $>>eig$ in MATLAB easily produces the eigenvalues of $P_{\mathbf{X}}$
+			\begin{equation}
+				\begin{split}
+					>>eig(P_{\mathbf{X}}) & = [1.5858\quad4.4142]\\
+				\end{split}
+			\end{equation}
+		}
 		\part{The likelihood ellipses are given by an equation of the form: $x^T P^{-1}_x x = c^2$. What are the principal axes in this case?}\\
-		\solution
+		\solution{
+			With $dim(\mathbf{X}) = 2$, we define $\mathbf{X}$ as
+			\[\begin{bmatrix}
+					x_1 \\
+					x_2 \\
+				\end{bmatrix}. \]
+			Taking the general form of the likelihood ellipses
+		}
 		\part{Plot the likelihood ellipses for $c = 0.25$, $1$, $1.5$}\\
 		\solution
 		\part{What is the probability of finding $\mathbf{X}$ inside each of these ellipses?}\\
