@@ -200,7 +200,7 @@
 				\end{equation}
 				\subpart{$E(((\mathbf{X}_1 - E(\mathbf{X}_1))\cdot(\mathbf{X}_2 - E(\mathbf{X}_2)))$}\\
 				\solution
-				Because the rolls of two different, but equal and fair dice are independent events, we can say the expectation of their combined rolls are uncorrelated and thusly 0.
+				{Because the rolls of two different, but equal and fair dice are independent events, we can say the expectation of their combined rolls are uncorrelated and thusly 0.}
 				\begin{equation}
 					\begin{split}
 						E(((\mathbf{X}_1 - E(\mathbf{X}_1))\cdot(\mathbf{X}_2 - E(\mathbf{X}_2))) & = 0\\
@@ -431,7 +431,7 @@
 			\end{cases}
 		\]}
 	\begin{parts}
-		\part{What is the mean of x?}\\
+		\part{What is the mean of x?}
 		\solution{
 			We know the general form for a continuous function to be
 			\[\overline{x} = \int^{\infty}_{-\infty}xf(x)dx \]
@@ -464,7 +464,7 @@
 		}
 	\end{parts}
 	\clearpage
-	\question{Consider a normally distributed two-dimensional vector $\mathbf{X}$, with mean value zero and
+	\question{Consider a normally distributed two-dimensional vector $\mathbf{X}$, with zero mean and
 		\[P_\mathbf{X} =
 			\begin{bmatrix}
 				2 & 1 \\
@@ -473,8 +473,8 @@
 	}
 	\begin{parts}
 		\part{Find the eigenvalues of $P_{\mathbf{X}}$}\\
-		\solution{
-			Using $>>eig$ in MATLAB easily produces the eigenvalues of $P_{\mathbf{X}}$
+		\solution
+		{Using $>>eig$ in MATLAB easily produces the eigenvalues of $P_{\mathbf{X}}$
 			\begin{equation}
 				\begin{split}
 					>>eig(P_{\mathbf{X}}) & = [1.5858\quad4.4142]\\
@@ -483,17 +483,31 @@
 		}
 		\part{The likelihood ellipses are given by an equation of the form: $x^T P^{-1}_x x = c^2$. What are the principal axes in this case?}\\
 		\solution{
-			With $dim(\mathbf{X}) = 2$, we define $\mathbf{X}$ as
-			\[\begin{bmatrix}
-					x_1 \\
-					x_2 \\
-				\end{bmatrix}. \]
-			Taking the general form of the likelihood ellipses
-		}
+			While we could use the likelihood ellipse equation to determine the principal axes, it is also known that the principles axes are just the eigenvectors of $\mathbf{P}_x$. We can use $>>eig$ once again to find these axes.
+			\begin{equation}
+				\begin{split}
+					>>eig(\mathbf{P}_x) & =
+					\begin{bmatrix}
+						-0.92388 & 0.38268 \\
+						0.38268  & 0.92388 \\
+					\end{bmatrix}\\
+				\end{split}
+			\end{equation}}
 		\part{Plot the likelihood ellipses for $c = 0.25$, $1$, $1.5$}\\
-		\solution
-		\part{What is the probability of finding $\mathbf{X}$ inside each of these ellipses?}\\
-		\solution
+		\solution{
+			Using the equation of ellipse we are able to plot the likelihood at each value for $c$.
+			\begin{figure}[!h]
+				\centering
+				\includegraphics[width=0.85\linewidth]{Q6_c.png}
+			\end{figure}
+		}
+		\clearpage
+		\part{What is the probability of finding $\mathbf{X}$ inside each of these ellipses?}
+
+		\solution{If we assume a linear relationship between the ellipses of\\ $c = [0.25\quad1\quad1.5]$, we can look at the \textit{ErrorEllipses.docx} that was provided to me, to interpolate between each of the values for $c$.
+
+		According to the document, for $c = 1$ the probability of $\mathbf{X}$ lying inside the ellipse is $39.34\%$. For $c = .25$ and $1.5$, the probability is $9.835\%$ and $59.01\%$, respectively.
+		}
 	\end{parts}
 	\clearpage
 	\question{Given $x \sim N(0,\sigma_x^2)$ and $y = 2x^2$}
