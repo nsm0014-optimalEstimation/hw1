@@ -512,13 +512,36 @@
 	\clearpage
 	\question{Given $x \sim N(0,\sigma_x^2)$ and $y = 2x^2$}
 	\begin{parts}
-		\part{Find the PDF of $y$}\\
+		\part{Find the PDF of $y$}
+		
+		\solution{
+			We know a general form of equation \ref{eq:32} exists when $g(x)$ is invertible and also continuously differentiable.
+			\begin{equation}\label{eq:32}
+				\begin{split}
+					f_y(y) & = f_x(g^{-1}(y))\left|\frac{\partial g^{-1}(y)}{\partial y}
+					\right|\\
+				\end{split}
+			\end{equation}
+			From the problem statement, we can define $g(y)$ as $2x^2$ and $g^{-1}(y) = \sqrt{\frac{y}{2}}$. Differentiating $g^{-1}(x)$ leaves us with
+			\[
+				\left|\frac{\partial g^{-1}(y)}{\partial y}\right| = \frac{1}{2y\sqrt{2}}.
+			\]
+			Continuing on with our particular form of equation \ref{eq:32} gives us
+			\begin{equation}
+				\begin{split}
+					f_y(y) & = f_y\left(\sqrt{\frac{y}{2}}\right)\frac{1}{2y\sqrt{2}}\\
+					f_y(y) & = \frac{exp(-\frac{y}{4\sigma^2})}{\sqrt{2\pi\sigma^2}}\frac{1}{2y\sqrt{2}}\\
+					f_y(y) & = \frac{exp(-\frac{y}{4\sigma^2})}{4y\sqrt{\pi\sigma^2}}\\
+				\end{split}
+			\end{equation}
+		}
+		\part{Draw the PDFs of $x$ and $y$ on the same plot for $\sigma_x = 2.0$}
+		\solution{
+
+		}
+		\part{How has the density function changed by this transformation?}
 		\solution
-		\part{Draw the PDFs of $x$ and $y$ on the same plot for $\sigma_x = 2.0$}\\
-		\solution
-		\part{How has the density function changed by this transformation?}\\
-		\solution
-		\part{Is $y$ a normal random variable?}\\
+		\part{Is $y$ a normal random variable?}
 		\solution
 	\end{parts}
 \end{questions}
