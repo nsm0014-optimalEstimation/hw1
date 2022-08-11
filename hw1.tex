@@ -513,7 +513,7 @@
 	\question{Given $x \sim N(0,\sigma_x^2)$ and $y = 2x^2$}
 	\begin{parts}
 		\part{Find the PDF of $y$}
-		
+
 		\solution{
 			We know a general form of equation \ref{eq:32} exists when $g(x)$ is invertible and also continuously differentiable.
 			\begin{equation}\label{eq:32}
@@ -537,12 +537,24 @@
 		}
 		\part{Draw the PDFs of $x$ and $y$ on the same plot for $\sigma_x = 2.0$}
 		\solution{
-
+			\begin{figure}[!h]
+				\centering
+				\includegraphics[width=0.81\linewidth]{Q7_b.png}
+			\end{figure}
 		}
+		\clearpage
+
 		\part{How has the density function changed by this transformation?}
+
 		\solution
+		{
+			It seems that the density function has less variance, but still has zero-mean. It also has a greater spike about the mean.
+		}
 		\part{Is $y$ a normal random variable?}
-		\solution
+
+		\solution{
+			The variable $y$ is not a normal variable any more because of its inability to use 0. when $f_y(y=0)$, the function aproaches positive infinity.
+		}
 	\end{parts}
 \end{questions}
 \end{document}
